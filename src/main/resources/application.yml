@@ -1,0 +1,31 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: age-detector
+  r2dbc:
+    url: r2dbc:postgresql://ep-rough-dream-a5jgv01u-pooler.us-east-2.aws.neon.tech/sql?sslmode=require
+    username: db_owner
+    password: CTtqXi6G2NFx
+  flyway:
+    enabled: true
+    locations: classpath:/sql/V1__age_detector.sql #src/main/resources/db/migration/V1__init_schema.sql
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
+
+rapidapi:
+  url: https://age-detector.p.rapidapi.com
+  host: age-detector.p.rapidapi.com
+  apikey: 3054dca294msh311fcc16893ce74p17ef24jsncbd8ead6ed76
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
