@@ -62,7 +62,7 @@ Spring WebFlux | Data MongoDB Reactive | Project Reactor
       <scope>test</scope>
 </dependency>
 ```
-## **Dependencias Swagger para WebFlux**
+## **Dependencias Swagger para Spring WebFlux**
 ```
 <dependency>
       <groupId>org.springdoc</groupId>
